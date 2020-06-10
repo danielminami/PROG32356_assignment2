@@ -11,6 +11,7 @@ namespace Assignment2 {
         /// </summary>
         [STAThread]
         static void Main() {
+            Console.Write("hi");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
