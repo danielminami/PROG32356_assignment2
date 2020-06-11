@@ -31,9 +31,43 @@ namespace Assignment2.models {
                 case "%":
                     result = n1 % n2;
                     break;
+                case "n!":
+                    result = factorial(n1);
+                    break;
+                case "abs":
+                    result = Math.Abs(n1);
+                    break;
+                case "pow":
+                    result = Math.Pow(n1, n2);
+                    break;
+                case "exp":
+                    result = Math.Exp(n1);
+                    break;
+                case "1x":
+                    if (n1 == 0)
+                        return "Error: Division by zero";
+                    result = 1/n1;
+                    break;
+                case "log":
+                    result = Math.Log10(n1);
+                    break;
+                case "ln":
+                    result = Math.Log(n1);
+                    break;
+                case "sqrt":
+                    result = Math.Sqrt(n1);
+                    break;
             }
             return result.ToString();
         }
 
+        private double factorial(double n) {
+            if (n == 0) {
+                return 1;
+            } else {
+                return n * factorial(n - 1);
+            }
+
+        }
     }
 }
