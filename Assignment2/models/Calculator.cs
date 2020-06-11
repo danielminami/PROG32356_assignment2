@@ -49,10 +49,10 @@ namespace Assignment2.models {
                     result = 1/n1;
                     break;
                 case "log":
-                    result = Math.Log(n1);
+                    result = Math.Log10(n1);
                     break;
                 case "ln":
-                    result = Math.Log10(n1);
+                    result = Math.Log(n1);
                     break;
                 case "sqrt":
                     result = Math.Sqrt(n1);
