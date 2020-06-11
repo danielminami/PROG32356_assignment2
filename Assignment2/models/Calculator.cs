@@ -7,67 +7,62 @@ using System.Threading.Tasks;
 namespace Assignment2.models {
     class Calculator {
 
-        public double Num1 { get; set; }
-        public double Num2 { get; set; }
-        public string Oper { get; set; }
+        public double Number1 { get; set; }
+        public double Number2 { get; set; }
+        public string Operator { get; set; }
 
-        public string calculate (double n1, double n2, string op) {
+        public string Calculate (double firstNumber, double secondNumber, string operatorSymbol) {
             double result = 0;
-            switch (op) {
+            switch (operatorSymbol.ToUpper()) {
                 case "+":
-                    result = n1 + n2;
+                    result = firstNumber + secondNumber;
                     break;
                 case "-":
-                    result = n1 - n2;
+                    result = firstNumber - secondNumber;
                     break;
                 case "*":
-                    result = n1 * n2;
+                    result = firstNumber * secondNumber;
                     break;
                 case "/":
-                    if (n1 == 0 || n2 == 0)
+                    if (firstNumber == 0 || secondNumber == 0)
                         return "Error: Division by zero";
-                    result = n1 / n2;
+                    result = firstNumber / secondNumber;
                     break;
                 case "%":
-                    result = n1 % n2;
+                    result = firstNumber % secondNumber;
                     break;
-                case "n!":
-                    result = factorial(n1);
+                case "N!":
+                    result = Factorial(firstNumber);
                     break;
-                case "abs":
-                    result = Math.Abs(n1);
+                case "ABS":
+                    result = Math.Abs(firstNumber);
                     break;
-                case "pow":
-                    result = Math.Pow(n1, n2);
+                case "POW":
+                    result = Math.Pow(firstNumber, secondNumber);
                     break;
-                case "exp":
-                    result = Math.Exp(n1);
+                case "EXP":
+                    result = Math.Exp(firstNumber);
                     break;
-                case "1x":
-                    if (n1 == 0)
+                case "1X":
+                    if (firstNumber == 0)
                         return "Error: Division by zero";
-                    result = 1/n1;
+                    result = 1/firstNumber;
                     break;
-                case "log":
-                    result = Math.Log10(n1);
+                case "LOG":
+                    result = Math.Log10(firstNumber);
                     break;
-                case "ln":
-                    result = Math.Log(n1);
+                case "LN":
+                    result = Math.Log(firstNumber);
                     break;
-                case "sqrt":
-                    result = Math.Sqrt(n1);
+                case "SQRT":
+                    result = Math.Sqrt(firstNumber);
                     break;
             }
             return result.ToString();
         }
 
-        private double factorial(double n) {
-            if (n == 0) {
-                return 1;
-            } else {
-                return n * factorial(n - 1);
-            }
-
+        private double Factorial(double nValue) {
+            return (nValue == 0) ? 1 : (nValue * Factorial(nValue - 1));
         }
     }
 }
