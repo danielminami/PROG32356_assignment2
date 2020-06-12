@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Assignment2 {
-    public partial class Form1 : Form {
+namespace Assignment2
+{
+    public partial class Form1 : Form
+    {
 
         String math = "";
         Double input1, input2;
-        public Form1() {
+        public Form1()
+        {
             InitializeComponent();
 
         }
@@ -33,21 +36,18 @@ namespace Assignment2 {
         {
             Button b = (Button)sender; // creating an object
 
-
-            if (outputDisplay.Text == "0")
-                outputDisplay.Text = "";
             // to use decimal only once
-            if (b.Text == ".")
+            if (outputDisplay.Text == "0" && b.Text != "0")
             {
-                if (!outputDisplay.Text.Contains("."))
-                    outputDisplay.Text = outputDisplay.Text + b.Text;
-
+                outputDisplay.Text = (b.Text != ".") ? b.Text : outputDisplay.Text + b.Text;
             }
-
-            else
+            else if (outputDisplay.Text != "0" && b.Text != ".")
             {
-                outputDisplay.Text = outputDisplay.Text + b.Text;
-
+                outputDisplay.Text += b.Text;
+            }
+            else if (b.Text == "." && !outputDisplay.Text.Contains("."))
+            {
+                outputDisplay.Text += b.Text;
             }
         }
 

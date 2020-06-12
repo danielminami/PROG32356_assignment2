@@ -51,10 +51,11 @@
             // outputDisplay
             // 
             this.outputDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputDisplay.Location = new System.Drawing.Point(12, 3);
+            this.outputDisplay.Location = new System.Drawing.Point(16, 4);
+            this.outputDisplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.outputDisplay.Multiline = true;
             this.outputDisplay.Name = "outputDisplay";
-            this.outputDisplay.Size = new System.Drawing.Size(258, 36);
+            this.outputDisplay.Size = new System.Drawing.Size(751, 43);
             this.outputDisplay.TabIndex = 0;
             this.outputDisplay.Text = "0";
             this.outputDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -62,6 +63,7 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
@@ -70,9 +72,10 @@
             this.backspace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.backspace.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backspace.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.backspace.Location = new System.Drawing.Point(12, 54);
+            this.backspace.Location = new System.Drawing.Point(16, 66);
+            this.backspace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backspace.Name = "backspace";
-            this.backspace.Size = new System.Drawing.Size(60, 60);
+            this.backspace.Size = new System.Drawing.Size(80, 74);
             this.backspace.TabIndex = 2;
             this.backspace.Text = "⌫ ";
             this.backspace.UseVisualStyleBackColor = false;
@@ -82,9 +85,10 @@
             this.mod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.mod.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.mod.Location = new System.Drawing.Point(210, 54);
+            this.mod.Location = new System.Drawing.Point(280, 66);
+            this.mod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mod.Name = "mod";
-            this.mod.Size = new System.Drawing.Size(60, 60);
+            this.mod.Size = new System.Drawing.Size(80, 74);
             this.mod.TabIndex = 3;
             this.mod.Text = "%";
             this.mod.UseVisualStyleBackColor = false;
@@ -95,9 +99,10 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button3.Location = new System.Drawing.Point(144, 54);
+            this.button3.Location = new System.Drawing.Point(192, 66);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 60);
+            this.button3.Size = new System.Drawing.Size(80, 74);
             this.button3.TabIndex = 4;
             this.button3.UseVisualStyleBackColor = false;
             // 
@@ -106,9 +111,10 @@
             this.clearBttn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.clearBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBttn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.clearBttn.Location = new System.Drawing.Point(78, 54);
+            this.clearBttn.Location = new System.Drawing.Point(104, 66);
+            this.clearBttn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clearBttn.Name = "clearBttn";
-            this.clearBttn.Size = new System.Drawing.Size(60, 60);
+            this.clearBttn.Size = new System.Drawing.Size(80, 74);
             this.clearBttn.TabIndex = 5;
             this.clearBttn.Text = "C";
             this.clearBttn.UseVisualStyleBackColor = false;
@@ -119,9 +125,10 @@
             this.b5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b5.Location = new System.Drawing.Point(78, 186);
+            this.b5.Location = new System.Drawing.Point(104, 229);
+            this.b5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b5.Name = "b5";
-            this.b5.Size = new System.Drawing.Size(60, 60);
+            this.b5.Size = new System.Drawing.Size(80, 74);
             this.b5.TabIndex = 6;
             this.b5.Text = "5";
             this.b5.UseVisualStyleBackColor = false;
@@ -132,9 +139,10 @@
             this.b4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b4.Location = new System.Drawing.Point(12, 186);
+            this.b4.Location = new System.Drawing.Point(16, 229);
+            this.b4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b4.Name = "b4";
-            this.b4.Size = new System.Drawing.Size(60, 60);
+            this.b4.Size = new System.Drawing.Size(80, 74);
             this.b4.TabIndex = 7;
             this.b4.Text = "4";
             this.b4.UseVisualStyleBackColor = false;
@@ -145,9 +153,10 @@
             this.b8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b8.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b8.Location = new System.Drawing.Point(78, 120);
+            this.b8.Location = new System.Drawing.Point(104, 148);
+            this.b8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b8.Name = "b8";
-            this.b8.Size = new System.Drawing.Size(60, 60);
+            this.b8.Size = new System.Drawing.Size(80, 74);
             this.b8.TabIndex = 8;
             this.b8.Text = "8";
             this.b8.UseVisualStyleBackColor = false;
@@ -158,9 +167,10 @@
             this.b7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b7.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b7.Location = new System.Drawing.Point(12, 120);
+            this.b7.Location = new System.Drawing.Point(16, 148);
+            this.b7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b7.Name = "b7";
-            this.b7.Size = new System.Drawing.Size(60, 60);
+            this.b7.Size = new System.Drawing.Size(80, 74);
             this.b7.TabIndex = 9;
             this.b7.Text = "7";
             this.b7.UseVisualStyleBackColor = false;
@@ -171,9 +181,10 @@
             this.b6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b6.Location = new System.Drawing.Point(144, 186);
+            this.b6.Location = new System.Drawing.Point(192, 229);
+            this.b6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b6.Name = "b6";
-            this.b6.Size = new System.Drawing.Size(60, 60);
+            this.b6.Size = new System.Drawing.Size(80, 74);
             this.b6.TabIndex = 10;
             this.b6.Text = "6";
             this.b6.UseVisualStyleBackColor = false;
@@ -184,9 +195,10 @@
             this.b9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b9.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b9.Location = new System.Drawing.Point(144, 120);
+            this.b9.Location = new System.Drawing.Point(192, 148);
+            this.b9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b9.Name = "b9";
-            this.b9.Size = new System.Drawing.Size(60, 60);
+            this.b9.Size = new System.Drawing.Size(80, 74);
             this.b9.TabIndex = 11;
             this.b9.Text = "9";
             this.b9.UseVisualStyleBackColor = false;
@@ -197,9 +209,10 @@
             this.bAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bAdd.Location = new System.Drawing.Point(210, 120);
+            this.bAdd.Location = new System.Drawing.Point(280, 148);
+            this.bAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bAdd.Name = "bAdd";
-            this.bAdd.Size = new System.Drawing.Size(60, 60);
+            this.bAdd.Size = new System.Drawing.Size(80, 74);
             this.bAdd.TabIndex = 12;
             this.bAdd.Text = "+";
             this.bAdd.UseVisualStyleBackColor = false;
@@ -210,9 +223,10 @@
             this.bSubtract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bSubtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSubtract.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bSubtract.Location = new System.Drawing.Point(210, 186);
+            this.bSubtract.Location = new System.Drawing.Point(280, 229);
+            this.bSubtract.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bSubtract.Name = "bSubtract";
-            this.bSubtract.Size = new System.Drawing.Size(60, 60);
+            this.bSubtract.Size = new System.Drawing.Size(80, 74);
             this.bSubtract.TabIndex = 13;
             this.bSubtract.Text = "-";
             this.bSubtract.UseVisualStyleBackColor = false;
@@ -223,9 +237,10 @@
             this.b1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b1.Location = new System.Drawing.Point(12, 252);
+            this.b1.Location = new System.Drawing.Point(16, 310);
+            this.b1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(60, 60);
+            this.b1.Size = new System.Drawing.Size(80, 74);
             this.b1.TabIndex = 14;
             this.b1.Text = "1";
             this.b1.UseVisualStyleBackColor = false;
@@ -236,9 +251,10 @@
             this.b2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b2.Location = new System.Drawing.Point(78, 252);
+            this.b2.Location = new System.Drawing.Point(104, 310);
+            this.b2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(60, 60);
+            this.b2.Size = new System.Drawing.Size(80, 74);
             this.b2.TabIndex = 15;
             this.b2.Text = "2";
             this.b2.UseVisualStyleBackColor = false;
@@ -249,9 +265,10 @@
             this.b3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b3.Location = new System.Drawing.Point(144, 252);
+            this.b3.Location = new System.Drawing.Point(192, 310);
+            this.b3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b3.Name = "b3";
-            this.b3.Size = new System.Drawing.Size(60, 60);
+            this.b3.Size = new System.Drawing.Size(80, 74);
             this.b3.TabIndex = 16;
             this.b3.Text = "3";
             this.b3.UseVisualStyleBackColor = false;
@@ -262,9 +279,10 @@
             this.bMutiply.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bMutiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bMutiply.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bMutiply.Location = new System.Drawing.Point(210, 252);
+            this.bMutiply.Location = new System.Drawing.Point(280, 310);
+            this.bMutiply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bMutiply.Name = "bMutiply";
-            this.bMutiply.Size = new System.Drawing.Size(60, 60);
+            this.bMutiply.Size = new System.Drawing.Size(80, 74);
             this.bMutiply.TabIndex = 17;
             this.bMutiply.Text = "*";
             this.bMutiply.UseVisualStyleBackColor = false;
@@ -275,9 +293,10 @@
             this.b0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.b0.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b0.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.b0.Location = new System.Drawing.Point(12, 318);
+            this.b0.Location = new System.Drawing.Point(16, 391);
+            this.b0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.b0.Name = "b0";
-            this.b0.Size = new System.Drawing.Size(60, 60);
+            this.b0.Size = new System.Drawing.Size(80, 74);
             this.b0.TabIndex = 18;
             this.b0.Text = "0";
             this.b0.UseVisualStyleBackColor = false;
@@ -288,9 +307,10 @@
             this.bDecimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bDecimal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bDecimal.Location = new System.Drawing.Point(78, 318);
+            this.bDecimal.Location = new System.Drawing.Point(104, 391);
+            this.bDecimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bDecimal.Name = "bDecimal";
-            this.bDecimal.Size = new System.Drawing.Size(60, 60);
+            this.bDecimal.Size = new System.Drawing.Size(80, 74);
             this.bDecimal.TabIndex = 19;
             this.bDecimal.Text = ".";
             this.bDecimal.UseVisualStyleBackColor = false;
@@ -301,9 +321,10 @@
             this.bEqual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEqual.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bEqual.Location = new System.Drawing.Point(144, 318);
+            this.bEqual.Location = new System.Drawing.Point(192, 391);
+            this.bEqual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bEqual.Name = "bEqual";
-            this.bEqual.Size = new System.Drawing.Size(60, 60);
+            this.bEqual.Size = new System.Drawing.Size(80, 74);
             this.bEqual.TabIndex = 20;
             this.bEqual.Text = "=";
             this.bEqual.UseVisualStyleBackColor = false;
@@ -314,9 +335,10 @@
             this.bDivide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.bDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bDivide.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bDivide.Location = new System.Drawing.Point(210, 318);
+            this.bDivide.Location = new System.Drawing.Point(280, 391);
+            this.bDivide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bDivide.Name = "bDivide";
-            this.bDivide.Size = new System.Drawing.Size(60, 60);
+            this.bDivide.Size = new System.Drawing.Size(80, 74);
             this.bDivide.TabIndex = 21;
             this.bDivide.Text = "/";
             this.bDivide.UseVisualStyleBackColor = false;
@@ -324,10 +346,10 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(282, 380);
+            this.ClientSize = new System.Drawing.Size(925, 468);
             this.Controls.Add(this.bDivide);
             this.Controls.Add(this.bEqual);
             this.Controls.Add(this.bDecimal);
@@ -349,6 +371,7 @@
             this.Controls.Add(this.mod);
             this.Controls.Add(this.backspace);
             this.Controls.Add(this.outputDisplay);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
