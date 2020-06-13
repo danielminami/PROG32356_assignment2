@@ -5,11 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Assignment2.models {
-    class Calculator {
+    public class Calculator {
+        public double FirstNumber { get; set; }
+        public double SecondNumber { get; set; }
+        public string OperatorSymbol { get; set; }
+        public Calculator() { }
 
-        public double Number1 { get; set; }
-        public double Number2 { get; set; }
-        public string Operator { get; set; }
+        public Calculator(double firstNumber, double secondNumber, string operatorSymbol)
+        {
+            FirstNumber = firstNumber;
+            SecondNumber = secondNumber;
+            OperatorSymbol = operatorSymbol;
+        }
 
         public string Calculate (double firstNumber, double secondNumber, string operatorSymbol) {
             double result = 0;
@@ -59,6 +66,11 @@ namespace Assignment2.models {
                     break;
             }
             return result.ToString();
+        }
+
+        public string Calculate()
+        {
+            return Calculate(FirstNumber, SecondNumber, OperatorSymbol);
         }
 
         private double Factorial(double nValue) {

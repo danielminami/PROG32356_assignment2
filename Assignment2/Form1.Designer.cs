@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.outputDisplay = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.backspace = new System.Windows.Forms.Button();
@@ -52,14 +53,13 @@
             // 
             this.outputDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputDisplay.Location = new System.Drawing.Point(16, 4);
-            this.outputDisplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.outputDisplay.Margin = new System.Windows.Forms.Padding(4);
             this.outputDisplay.Multiline = true;
             this.outputDisplay.Name = "outputDisplay";
             this.outputDisplay.Size = new System.Drawing.Size(751, 43);
             this.outputDisplay.TabIndex = 0;
             this.outputDisplay.Text = "0";
             this.outputDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.outputDisplay.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -73,12 +73,13 @@
             this.backspace.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backspace.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.backspace.Location = new System.Drawing.Point(16, 66);
-            this.backspace.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.backspace.Margin = new System.Windows.Forms.Padding(4);
             this.backspace.Name = "backspace";
             this.backspace.Size = new System.Drawing.Size(80, 74);
             this.backspace.TabIndex = 2;
             this.backspace.Text = "⌫ ";
             this.backspace.UseVisualStyleBackColor = false;
+            this.backspace.Click += new System.EventHandler(this.Backspace_Click);
             // 
             // mod
             // 
@@ -86,7 +87,7 @@
             this.mod.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mod.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.mod.Location = new System.Drawing.Point(280, 66);
-            this.mod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mod.Margin = new System.Windows.Forms.Padding(4);
             this.mod.Name = "mod";
             this.mod.Size = new System.Drawing.Size(80, 74);
             this.mod.TabIndex = 3;
@@ -100,7 +101,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.Location = new System.Drawing.Point(192, 66);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(80, 74);
             this.button3.TabIndex = 4;
@@ -112,13 +113,13 @@
             this.clearBttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBttn.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.clearBttn.Location = new System.Drawing.Point(104, 66);
-            this.clearBttn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearBttn.Margin = new System.Windows.Forms.Padding(4);
             this.clearBttn.Name = "clearBttn";
             this.clearBttn.Size = new System.Drawing.Size(80, 74);
             this.clearBttn.TabIndex = 5;
             this.clearBttn.Text = "C";
             this.clearBttn.UseVisualStyleBackColor = false;
-            this.clearBttn.Click += new System.EventHandler(this.clearBttn_Click);
+            this.clearBttn.Click += new System.EventHandler(this.ClearBttn_Click);
             // 
             // b5
             // 
@@ -126,7 +127,7 @@
             this.b5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b5.Location = new System.Drawing.Point(104, 229);
-            this.b5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b5.Margin = new System.Windows.Forms.Padding(4);
             this.b5.Name = "b5";
             this.b5.Size = new System.Drawing.Size(80, 74);
             this.b5.TabIndex = 6;
@@ -140,7 +141,7 @@
             this.b4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b4.Location = new System.Drawing.Point(16, 229);
-            this.b4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b4.Margin = new System.Windows.Forms.Padding(4);
             this.b4.Name = "b4";
             this.b4.Size = new System.Drawing.Size(80, 74);
             this.b4.TabIndex = 7;
@@ -154,7 +155,7 @@
             this.b8.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b8.Location = new System.Drawing.Point(104, 148);
-            this.b8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b8.Margin = new System.Windows.Forms.Padding(4);
             this.b8.Name = "b8";
             this.b8.Size = new System.Drawing.Size(80, 74);
             this.b8.TabIndex = 8;
@@ -168,7 +169,7 @@
             this.b7.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b7.Location = new System.Drawing.Point(16, 148);
-            this.b7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b7.Margin = new System.Windows.Forms.Padding(4);
             this.b7.Name = "b7";
             this.b7.Size = new System.Drawing.Size(80, 74);
             this.b7.TabIndex = 9;
@@ -182,7 +183,7 @@
             this.b6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b6.Location = new System.Drawing.Point(192, 229);
-            this.b6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b6.Margin = new System.Windows.Forms.Padding(4);
             this.b6.Name = "b6";
             this.b6.Size = new System.Drawing.Size(80, 74);
             this.b6.TabIndex = 10;
@@ -196,7 +197,7 @@
             this.b9.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b9.Location = new System.Drawing.Point(192, 148);
-            this.b9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b9.Margin = new System.Windows.Forms.Padding(4);
             this.b9.Name = "b9";
             this.b9.Size = new System.Drawing.Size(80, 74);
             this.b9.TabIndex = 11;
@@ -210,7 +211,7 @@
             this.bAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bAdd.Location = new System.Drawing.Point(280, 148);
-            this.bAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bAdd.Margin = new System.Windows.Forms.Padding(4);
             this.bAdd.Name = "bAdd";
             this.bAdd.Size = new System.Drawing.Size(80, 74);
             this.bAdd.TabIndex = 12;
@@ -224,7 +225,7 @@
             this.bSubtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSubtract.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bSubtract.Location = new System.Drawing.Point(280, 229);
-            this.bSubtract.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bSubtract.Margin = new System.Windows.Forms.Padding(4);
             this.bSubtract.Name = "bSubtract";
             this.bSubtract.Size = new System.Drawing.Size(80, 74);
             this.bSubtract.TabIndex = 13;
@@ -238,7 +239,7 @@
             this.b1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b1.Location = new System.Drawing.Point(16, 310);
-            this.b1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b1.Margin = new System.Windows.Forms.Padding(4);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(80, 74);
             this.b1.TabIndex = 14;
@@ -252,7 +253,7 @@
             this.b2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b2.Location = new System.Drawing.Point(104, 310);
-            this.b2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b2.Margin = new System.Windows.Forms.Padding(4);
             this.b2.Name = "b2";
             this.b2.Size = new System.Drawing.Size(80, 74);
             this.b2.TabIndex = 15;
@@ -266,7 +267,7 @@
             this.b3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b3.Location = new System.Drawing.Point(192, 310);
-            this.b3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b3.Margin = new System.Windows.Forms.Padding(4);
             this.b3.Name = "b3";
             this.b3.Size = new System.Drawing.Size(80, 74);
             this.b3.TabIndex = 16;
@@ -280,7 +281,7 @@
             this.bMutiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bMutiply.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bMutiply.Location = new System.Drawing.Point(280, 310);
-            this.bMutiply.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bMutiply.Margin = new System.Windows.Forms.Padding(4);
             this.bMutiply.Name = "bMutiply";
             this.bMutiply.Size = new System.Drawing.Size(80, 74);
             this.bMutiply.TabIndex = 17;
@@ -294,7 +295,7 @@
             this.b0.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b0.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.b0.Location = new System.Drawing.Point(16, 391);
-            this.b0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.b0.Margin = new System.Windows.Forms.Padding(4);
             this.b0.Name = "b0";
             this.b0.Size = new System.Drawing.Size(80, 74);
             this.b0.TabIndex = 18;
@@ -308,7 +309,7 @@
             this.bDecimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bDecimal.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bDecimal.Location = new System.Drawing.Point(104, 391);
-            this.bDecimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bDecimal.Margin = new System.Windows.Forms.Padding(4);
             this.bDecimal.Name = "bDecimal";
             this.bDecimal.Size = new System.Drawing.Size(80, 74);
             this.bDecimal.TabIndex = 19;
@@ -322,13 +323,13 @@
             this.bEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEqual.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bEqual.Location = new System.Drawing.Point(192, 391);
-            this.bEqual.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bEqual.Margin = new System.Windows.Forms.Padding(4);
             this.bEqual.Name = "bEqual";
             this.bEqual.Size = new System.Drawing.Size(80, 74);
             this.bEqual.TabIndex = 20;
             this.bEqual.Text = "=";
             this.bEqual.UseVisualStyleBackColor = false;
-            this.bEqual.Click += new System.EventHandler(this.bEqual_Click);
+            this.bEqual.Click += new System.EventHandler(this.Equal_Click);
             // 
             // bDivide
             // 
@@ -336,7 +337,7 @@
             this.bDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bDivide.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.bDivide.Location = new System.Drawing.Point(280, 391);
-            this.bDivide.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bDivide.Margin = new System.Windows.Forms.Padding(4);
             this.bDivide.Name = "bDivide";
             this.bDivide.Size = new System.Drawing.Size(80, 74);
             this.bDivide.TabIndex = 21;
@@ -371,10 +372,10 @@
             this.Controls.Add(this.mod);
             this.Controls.Add(this.backspace);
             this.Controls.Add(this.outputDisplay);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 
