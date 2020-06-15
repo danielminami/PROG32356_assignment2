@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Assignment2.models {
+
+    /// <summary>
+    /// This Class performs the Calculator operations and holds the 3 fields of a simple Calculator.
+    /// </summary>
     public class Calculator {
         public double FirstNumber { get; set; }
         public double SecondNumber { get; set; }

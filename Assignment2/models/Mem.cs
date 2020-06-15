@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Assignment2.models
 {
+    /// <summary>
+    /// This class stores the M function from Calculator
+    /// </summary>
     public class Mem
     {
-        public double FirstNumber { get; set; }
-        public double SecondNumber { get; set; }
-        public string Operator { get; set; }
+        public double Number { get; set; }
+
         
         public Mem()
         {
@@ -19,9 +21,7 @@ namespace Assignment2.models
         
         public void Clear()
         {
-            FirstNumber = 0;
-            SecondNumber = 0;
-            Operator = String.Empty;
+            Number = 0;
         }
     }
 }
