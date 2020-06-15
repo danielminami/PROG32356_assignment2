@@ -7,6 +7,7 @@ namespace Assignment2
     public partial class Form1 : Form
     {
         private Calculator Calc = null;
+        private bool IsReset;
 
         public Form1()
         {
@@ -18,17 +19,17 @@ namespace Assignment2
         //scroll and see "click" i wrote number Clicked there 
         private void Number_Click(object sender, EventArgs e)
         {
-            Button b = (Button)sender; // creating an object
+            Button b = (Button)sender;
+            if (IsReset) {
+                CleanDisplay();
+                IsReset = false;
+            }
 
             if (outputDisplay.Text == "0" && b.Text != "0")
             {
                 outputDisplay.Text = (b.Text != ".") ? b.Text : outputDisplay.Text + b.Text;
             }
-            else if (outputDisplay.Text != "0" && b.Text != ".")
-            {
-                outputDisplay.Text += b.Text;
-            }
-            else if (b.Text == "." && !outputDisplay.Text.Contains("."))
+            else if (outputDisplay.Text != "0" && b.Text != "." || (b.Text == "." && !outputDisplay.Text.Contains(".")))
             {
                 outputDisplay.Text += b.Text;
             }
@@ -43,8 +44,8 @@ namespace Assignment2
 
         private void Equal_Click(object sender, EventArgs e)
         {
-            if (Calc.OperatorSymbol != "+" || Calc.OperatorSymbol != "-" || Calc.OperatorSymbol != "*" || Calc.OperatorSymbol != "/" || 
-                Calc.OperatorSymbol != "pow" || Calc.OperatorSymbol != "mod")
+            if (Calc.OperatorSymbol != "+" || Calc.OperatorSymbol != "-" || Calc.OperatorSymbol != "*" || 
+                Calc.OperatorSymbol != "/" || Calc.OperatorSymbol != "pow" || Calc.OperatorSymbol != "mod")
             {
                 Calc.SecondNumber = Convert.ToDouble(outputDisplay.Text);
             }
@@ -96,8 +97,8 @@ namespace Assignment2
             if (!string.IsNullOrEmpty(Calc.OperatorSymbol))
             {
                 outputDisplay.Text = Calc.Calculate();
-
                 RestartCalculator();
+                IsReset = true;
             }
         }
     }
