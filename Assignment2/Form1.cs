@@ -6,7 +6,7 @@ namespace Assignment2
 {
     public partial class Form1 : Form
     {
-        private Calculator Calc;
+        private Calculator Calc = null;
 
         public Form1()
         {
@@ -16,7 +16,7 @@ namespace Assignment2
 
         //NumberClicked are for 7,8,9,4,5,6,1,2,3,0,. for all these buttons if you go on events for this and 
         //scroll and see "click" i wrote number Clicked there 
-        private void NumberClicked(object sender, EventArgs e)
+        private void Number_Click(object sender, EventArgs e)
         {
             Button b = (Button)sender; // creating an object
 
@@ -55,7 +55,7 @@ namespace Assignment2
 
         //Operators are +,-,*,/,% if you click on a button and go on events and see where it says click
         //you can see for the operators i wrote operators there
-        private void Operator(object sender, EventArgs e)
+        private void Operator_Click(object sender, EventArgs e)
         {
             Button b = (Button)sender; // object
 
