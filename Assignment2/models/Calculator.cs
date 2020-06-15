@@ -17,8 +17,11 @@ namespace Assignment2.models {
             SecondNumber = secondNumber;
             OperatorSymbol = operatorSymbol;
         }
-
-        public string Calculate (double firstNumber, double secondNumber, string operatorSymbol) {
+        public string Calculate()
+        {
+            return Calculate(FirstNumber, SecondNumber, OperatorSymbol);
+        }
+        private string Calculate (double firstNumber, double secondNumber, string operatorSymbol) {
             double result = 0;
             switch (operatorSymbol.ToUpper()) {
                 case "+":
@@ -35,10 +38,10 @@ namespace Assignment2.models {
                         return "Error: Division by zero";
                     result = firstNumber / secondNumber;
                     break;
-                case "%":
+                case "MOD":
                     result = firstNumber % secondNumber;
                     break;
-                case "N!":
+                case "FACT":
                     result = Factorial(firstNumber);
                     break;
                 case "ABS":
@@ -47,10 +50,10 @@ namespace Assignment2.models {
                 case "POW":
                     result = Math.Pow(firstNumber, secondNumber);
                     break;
-                case "EXP":
+                case "EXP": //eˣ
                     result = Math.Exp(firstNumber);
                     break;
-                case "1X":
+                case "INV": //INVERSE 1/x
                     if (firstNumber == 0)
                         return "Error: Division by zero";
                     result = 1/firstNumber;
@@ -66,11 +69,6 @@ namespace Assignment2.models {
                     break;
             }
             return result.ToString();
-        }
-
-        public string Calculate()
-        {
-            return Calculate(FirstNumber, SecondNumber, OperatorSymbol);
         }
 
         private double Factorial(double nValue) {

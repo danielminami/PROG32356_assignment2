@@ -37,45 +37,68 @@ namespace Assignment2
         private void ClearBttn_Click(object sender, EventArgs e)
         {
             // it will display a 0 when the clear button is clicked
-            outputDisplay.Text = "0";
-
-            Clear();
+            CleanDisplay();
+            RestartCalculator();
         }
 
         private void Equal_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(Calc.OperatorSymbol))
+            if (Calc.OperatorSymbol != "+" || Calc.OperatorSymbol != "-" || Calc.OperatorSymbol != "*" || Calc.OperatorSymbol != "/" || 
+                Calc.OperatorSymbol != "pow" || Calc.OperatorSymbol != "mod")
             {
                 Calc.SecondNumber = Convert.ToDouble(outputDisplay.Text);
-                outputDisplay.Text = Calc.Calculate();
-
-                Clear();
             }
+
+            PerformOperation();
         }
 
         //Operators are +,-,*,/,% if you click on a button and go on events and see where it says click
         //you can see for the operators i wrote operators there
         private void Operator_Click(object sender, EventArgs e)
         {
-            Button b = (Button)sender; // object
+            Button button = (Button)sender; // object
+            string btn = button.Tag.ToString();
 
             Calc.FirstNumber = Convert.ToDouble(outputDisplay.Text);
+            Calc.OperatorSymbol = btn;
 
-            Calc.OperatorSymbol = b.Text;
-            outputDisplay.Text = "0";
+            CleanDisplay();
+
+            if (!(btn == "+" || btn == "-" || btn == "*" ||
+                btn == "/" || btn == "pow" || btn == "mod"
+                ))
+            {
+                PerformOperation();
+            }
         }
 
         private void Backspace_Click(object sender, EventArgs e)
         {
-            if (outputDisplay.Text != "0")
-                outputDisplay.Text = outputDisplay.Text.Remove(outputDisplay.Text.Length - 1, 1);
+            outputDisplay.Text = outputDisplay.Text.Remove(outputDisplay.Text.Length - 1, 1);
+            if (string.IsNullOrEmpty(outputDisplay.Text))
+                CleanDisplay();
+
         }
 
-        private void Clear()
+        private void RestartCalculator()
         {
             Calc.FirstNumber = 0;
             Calc.SecondNumber = 0;
             Calc.OperatorSymbol = String.Empty;
+        }
+        private void CleanDisplay()
+        {
+            outputDisplay.Text = "0";
+        }
+
+        private void PerformOperation()
+        {
+            if (!string.IsNullOrEmpty(Calc.OperatorSymbol))
+            {
+                outputDisplay.Text = Calc.Calculate();
+
+                RestartCalculator();
+            }
         }
     }
 }
