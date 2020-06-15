@@ -23,10 +23,8 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.outputDisplay = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnSquareRoot = new System.Windows.Forms.Button();
             this.btnMemoryRecall = new System.Windows.Forms.Button();
             this.btnMemoryAdd = new System.Windows.Forms.Button();
@@ -70,12 +68,6 @@
             this.outputDisplay.TabIndex = 0;
             this.outputDisplay.Text = "0";
             this.outputDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // btnSquareRoot
             // 
@@ -557,7 +549,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox outputDisplay;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnSquareRoot;
         private System.Windows.Forms.Button btnMemoryRecall;
         private System.Windows.Forms.Button btnMemoryAdd;
